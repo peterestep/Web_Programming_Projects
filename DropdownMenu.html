@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<header>
+    <style>
+        body{
+            background-color: rgb(213, 231, 213);
+            font-family: sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+        .navBar{
+            background-color: green;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        /*Dropdown buttons*/
+        .dropbtn {
+            font-weight: bold;
+            color: black;
+            padding: 8px;
+            padding-right: 24px;
+            padding-left: 24px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: green;
+        }
+         
+        /*Dropdown menu*/
+        .dropdown {
+            background-color: green;
+            position: relative;
+            display: inline-block;
+            padding: 0px;
+        }
+        
+        /*Dropdown options*/
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            background-color: lightgreen;
+            min-width: 120px;
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-list dlink {
+            color: rgb(2, 2, 82);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-list dlink:hover {background-color: rgb(172, 247, 172);}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-list {
+            display: block;
+        }
+        
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: lightgreen;
+        }
+        </style>
+
+</header>
+<body>
+    <div= class="navBar"></div>
+    <div class="dropdown">
+        <button class="dropbtn">File</button>
+        <div class="dropdown-list">
+            <dlink href="#">New</dlink>
+            <dlink href="#">Open</dlink>
+            <dlink href="#">Save</dlink>
+            <dlink href="#">Print</dlink>
+            <dlink href="#">Close</dlink>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Edit</button>
+        <div class="dropdown-list">
+            <dlink href="#">Undo</dlink>
+            <dlink href="#">Redo</dlink>
+            <dlink href="#">Cut</dlink>
+            <dlink href="#">Copy</dlink>
+            <dlink href="#">Paste</dlink>
+            <dlink href="#">Delete</dlink>
+            <dlink href="#">Select All</dlink>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">View</button>
+        <div class="dropdown-list">
+            <dlink href="#">Zoom In</dlink>
+            <dlink href="#">Zoom Out</dlink>
+            <dlink href="#">Actual Size</dlink>
+            <dlink href="#">Fit Page</dlink>
+            <dlink href="#">Fit Width</dlink>
+            <dlink href="#">Fit Height</dlink>
+            <dlink href="#">Rotate Left</dlink>
+            <dlink href="#">Rotate Right</dlink>
+            <dlink href="#">Full Screen</dlink>
+        </div>
+    </div>
+</body>
