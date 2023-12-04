@@ -28,43 +28,17 @@ import { ref } from 'vue';
 <template>
   <main class="columns is-multiline is-centered">
     <div class="column is-full">
-      <h1 class="title" >Home</h1>
-      <h2 class="subtitle">
-        Welcome to your Vue.js + TypeScript app
+      <h1 class="title is-centered" >Run With Me</h1>
+      <h2 class="subtitle is-centered">
+        No longer just about running!
       </h2>
-    </div>
-
-    <div class="column is-half-desktop is-centered">
-      <div class="panel is-primary">
-        <p class="panel-heading">
-          To Do
-        </p>
-        <div class="panel-block">
-          <p class="control has-icons-left">
-            <input  class="input" type="text" placeholder="What do you want to do"
-                    @keypress.enter="addTask" v-model="newTask" >
-            <span class="icon is-left">
-              <i class="fas fa-plus" aria-hidden="true"></i>
-            </span>
-          </p>
-        </div>
-        <p class="panel-tabs">
-          <a v-for="tab in tabList" :class="{ 'is-active': tabState == tab}" @click.prevent="tabState = tab">{{ tab }}</a>
-        </p>
-        <label class="panel-block" v-for="task in tasks" v-show="shouldDisplay(task)">
-          <input type="checkbox" v-model="task.completed">
-          {{ task.text }}
-        </label>
-        <div class="panel-block">
-          <button class="button is-link is-outlined is-fullwidth">
-            Reset all filters
-          </button>
-        </div>
+      <div class="box is-centered">
+        Reach your goals along side all of these other users!
       </div>
+    </div>
 
       <div class="box" v-for="user in users" :key="user.id">
         {{ user.firstName }} {{ user.lastName }}
       </div>
-    </div>
   </main>
 </template>
