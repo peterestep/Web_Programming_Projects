@@ -4,11 +4,12 @@ import { RouterLink } from 'vue-router';
 import LoginBadge from './LoginBadge.vue';
 
 const isActive = ref(false);
+const isShoppingCartOpen = ref(false);
 
 </script>
 
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="28" height="28" />
@@ -31,7 +32,6 @@ const isActive = ref(false);
           <a class="navbar-link">
             More
           </a>
-
           <div class="navbar-dropdown">
             <a class="navbar-item">
               About
@@ -62,6 +62,17 @@ const isActive = ref(false);
 
 <style scoped>
 
+@media (min-width: 641px) {
+  .navbar {
+    margin-right: 2rem;
+    transition: margin-right 0.5s ease-in-out;
+  }
+}
+.tag.is-small {
+  position: absolute;
+  transform: translate(50%, -30%);
+  font-size: x-small;
+}
 .router-link-active {
   font-weight: bold;
   border-bottom: 2px solid #00d1b2;
